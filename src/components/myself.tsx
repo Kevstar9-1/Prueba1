@@ -1,8 +1,7 @@
-import React from 'react';
-
+import Link from 'next/link';
 const PresentationSection: React.FC = () => {
   return (
-    <section id="#1">
+    <section id="myself">
       <h2>Personal presentation</h2>
       <p>Hello, my name is Kevin Hernandez and I am a Systems Engineering student. I am passionate about creating innovative solutions
         to solve problems</p>
@@ -11,5 +10,4 @@ const PresentationSection: React.FC = () => {
     </section>
   );
 }
-
 export default PresentationSection;

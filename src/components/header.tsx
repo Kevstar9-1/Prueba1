@@ -1,34 +1,39 @@
-import Link from "next/link";
-import React from "react";
+import React, { useState } from 'react';
+import Link from 'next/link';
 
 const Header: React.FC = () => {
+  const [hideHeader, setHideHeader] = useState(false);
+
+  const handleLinkClick = () => {
+    setHideHeader(true);
+  };
+
   return (
-    <header className="flex">
-      <div className = "logo">
-        <img src="/ima/logop.jpg" alt="logo" />
-      </div>
-      <nav className="flex item-center">
+    <header className={`flex ${hideHeader ? 'hidden' : ''}`}>
+      <nav className="flex item-right">
         <ul className="flex">
           <li className="mx-2">
-            <a href="/">Home</a>
+            <Link href="/">Home</Link>
           </li>
           <li className="mx-2">
-            <Link href="/#1">Personal Information </Link>
+            <Link href="/#myself">Personal Information</Link>
           </li>
           <li className="mx-2">
-            <a href="/myself">Projects</a>
+            <Link href="/#projects">Projects</Link>
           </li>
           <li className="mx-2">
-            <a href="/projects">Call Action</a>
+            <Link href="/#callAction">Call Action</Link>
           </li>
           <li className="mx-2">
-            <a href="/contact">Contacts</a>
+            <Link href="/#fooster">Contacts</Link>
           </li>
         </ul>
       </nav>
+      <div className="logo">
+        <img src="/ima/logop.jpg" alt="logo" />
+      </div>
     </header>
   );
 };
 
 export default Header;
-

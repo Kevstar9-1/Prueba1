@@ -1,7 +1,7 @@
 const Footer = () => {
     return (
       <footer>
-        <div className="footer-contact">
+        <div className="footer-contact" id="fooster">
           <h3>Contact</h3>
           <p>Phone: (506) 64692147</p>
           <p>Email : kevstar924@gmail.com</p>
